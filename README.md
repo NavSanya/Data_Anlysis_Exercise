@@ -19,17 +19,7 @@ python diagram.py
 You can see the actual diagram:
 <img src="ER_Diagram.png" alt="Diagram">
 
-#### Made SQL Scripts for all json files.
-```
-python json_to_sql.py
-```
 
-The Generated SQL Scripts (MySQL)
-Creating Tables.sql
-brands_insert.sql
-receipts_items_insert.sql
-receipts_insert.sql
-users_insert.sql
 
 ## SECOND: Write queries that directly answer predetermined questions from a business stakeholder
 
@@ -157,7 +147,24 @@ users_insert.sql
 python Data_Quality.py
 ```
 
-You can checkout the errors found in data_quality_issues.csv
+You can checkout the errors found in <b>data_quality_issues.csv</b>.
+#### Made SQL Scripts for all json files.
+```
+python json_to_sql.py
+```
+
+The Generated SQL Scripts (MySQL)
+Creating Tables.sql
+brands_insert.sql
+receipts_items_insert.sql
+receipts_insert.sql
+users_insert.sql
+
+When I was trying to do this I was encuntering multiple issues but the most major issues are Missing Values and Duplicate entries so I tried to go around it as much as possible. 
+
+I assumed that date format was given as a timestamp in milliseconds so I converted it into YYYY-MM-DD HH:MM format.
+
+Thats when I realized I can make a detailed csv file about each error in the json files therefore I made the python script and generated a csv file. 
 
 ## FOURTH: Communicate with Stakeholders
 Hi Team,
