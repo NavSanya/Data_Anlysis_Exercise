@@ -1,6 +1,6 @@
 # Fetch_AnalyEng_Exercise
 
-## First: Review Existing Unstructured Data and Diagram a New Structured Relational Data Model
+## FIRST: Review Existing Unstructured Data and Diagram a New Structured Relational Data Model
 
 Make sure you have the following libraries:
 ```
@@ -31,7 +31,7 @@ receipts_items_insert.sql
 receipts_insert.sql
 users_insert.sql
 
-## Write queries that directly answer predetermined questions from a business stakeholder
+## SECOND: Write queries that directly answer predetermined questions from a business stakeholder
 
 <details>
         <summary>What are the top 5 brands by receipts scanned for most recent month?</summary>
@@ -151,7 +151,7 @@ users_insert.sql
 
 </details>
 
-## Evaluate Data Quality Issues in the Data Provided
+## THIRD: Evaluate Data Quality Issues in the Data Provided
 
 ```
 python Data_Quality.py
@@ -159,7 +159,7 @@ python Data_Quality.py
 
 You can checkout the errors found in data_quality_issues.csv
 
-## Communicate with Stakeholders
+## FOURTH: Communicate with Stakeholders
 Hi Team,
 
 After reviewing the provided data and developing a new structured relational data model, I wanted to share some insights and raise a few questions.
