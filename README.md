@@ -24,7 +24,7 @@ You can see the actual diagram:
 python json_to_sql.py
 ```
 
-The Generated SQL Scripts
+The Generated SQL Scripts (MySQL)
 Creating Tables.sql
 brands_insert.sql
 receipts_items_insert.sql
