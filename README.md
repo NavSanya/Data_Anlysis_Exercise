@@ -35,19 +35,26 @@ users_insert.sql
 
 <details>
         <summary>What are the top 5 brands by receipts scanned for most recent month?</summary>
-        
-        WITH recent_month AS (
-                SELECT MAX(DATE_FORMAT(purchase_date, '%Y-%m')) AS max_month
-                FROM Receipts
-        )
-        SELECT b.name, COUNT(ri.receipt_item_id) AS receipt_count
-        FROM Receipts r
-        JOIN Receipt_Items ri ON r.receipt_id = ri.receipt_id
-        JOIN Brands b ON ri.brand_id = b.brand_id
-        WHERE DATE_FORMAT(r.purchase_date, '%Y-%m') = (SELECT max_month FROM recent_month)
-        GROUP BY b.name
-        ORDER BY receipt_count DESC
-        LIMIT 5;
+                       
+        WITH RecentMonth AS (
+            SELECT 
+                    b.name AS brand_name,
+                    COUNT(r.receipt_id) AS receipt_count
+            FROM 
+                    Receipts r
+            JOIN 
+                    Receipt_Items ri ON r.receipt_id = ri.receipt_id
+            JOIN 
+                    Brands b ON ri.brand_id = b.brand_id
+            WHERE 
+                    r.date_scanned >= DATE_FORMAT(NOW() - INTERVAL 1 MONTH, '%Y-%m-01')
+                    AND r.date_scanned < DATE_FORMAT(NOW(), '%Y-%m-01')
+            GROUP BY 
+                    b.name
+            ORDER BY 
+                    receipt_count DESC
+            LIMIT 5
+            );
 </details>
 
 <details>
