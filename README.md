@@ -154,17 +154,18 @@ python json_to_sql.py
 ```
 
 The Generated SQL Scripts (MySQL)
-Creating Tables.sql
-brands_insert.sql
-receipts_items_insert.sql
-receipts_insert.sql
-users_insert.sql
 
-When I was trying to do this I was encuntering multiple issues but the most major issues are Missing Values and Duplicate entries so I tried to go around it as much as possible. 
+* Creating Tables.sql
+* brands_insert.sql
+* receipts_items_insert.sql
+* receipts_insert.sql
+* users_insert.sql
 
-I assumed that date format was given as a timestamp in milliseconds so I converted it into YYYY-MM-DD HH:MM format.
+When I was trying to do this I was encountering multiple issues but the major issues were Missing Values and Duplicate entries so I tried to go around it as much as possible. 
 
-Thats when I realized I can make a detailed csv file about each error in the json files therefore I made the python script and generated a csv file. 
+I also assumed that date format was given as a timestamp in milliseconds so I converted it into YYYY-MM-DD HH:MM format.
+
+Thats when I realized I can make a detailed csv file about Missing Values and Duplicate entries error in the json files therefore I made the python script and generated a csv file. 
 
 ## FOURTH: Communicate with Stakeholders
 Hi Team,
@@ -202,4 +203,5 @@ I am attaching the issue details in the data_quality_issues.csv.
 Looking forward to your feedback and guidance on the next steps.
 
 Best regards,
+
 Nav Sanya Anand
